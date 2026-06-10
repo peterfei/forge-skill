@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Menlo, Monaco, 'Courier New', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="540" rx="12" fill="url(#bg)"/>
+
+  <!-- Window buttons -->
+  <circle cx="24" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="48" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="72" cy="20" r="6" fill="#27c93f"/>
+
+  <!-- Terminal prompt line -->
+  <text x="24" y="60" fill="#10b981" font-size="14">$</text>
+  <text x="44" y="60" fill="#e2e8f0" font-size="14">forge-skill 第一性原理</text>
+
+  <!-- Pipeline visualization -->
+  <!-- Phase 0 -->
+  <rect x="24" y="80" width="100" height="32" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="30" y="100" fill="#94a3b8" font-size="11">Phase 0</text>
+  <text x="74" y="100" fill="#e2e8f0" font-size="11">入口分流</text>
+
+  <!-- Arrow -->
+  <line x1="124" y1="96" x2="148" y2="96" stroke="#475569" stroke-width="2"/>
+  <polygon points="148,92 156,96 148,100" fill="#475569"/>
+
+  <!-- Phase 1 -->
+  <rect x="160" y="80" width="140" height="32" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="166" y="100" fill="#94a3b8" font-size="11">Phase 1</text>
+  <text x="220" y="100" fill="#8b5cf6" font-size="11">6路并行采集</text>
+
+  <!-- 6 parallel Agent indicators -->
+  <text x="310" y="92" fill="#64748b" font-size="9">┌─ A1 经典文献</text>
+  <text x="310" y="105" fill="#64748b" font-size="9">├─ A2 实践案例</text>
+  <text x="310" y="118" fill="#64748b" font-size="9">├─ A3 批判视角</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="96" x2="414" y2="96" stroke="#475569" stroke-width="2"/>
+  <polygon points="414,92 422,96 414,100" fill="#475569"/>
+
+  <!-- Phase 2 -->
+  <rect x="426" y="80" width="120" height="32" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="432" y="100" fill="#94a3b8" font-size="11">Phase 2</text>
+  <text x="478" y="100" fill="#f59e0b" font-size="11">方法论提炼</text>
+
+  <!-- Arrow -->
+  <line x1="546" y1="96" x2="570" y2="96" stroke="#475569" stroke-width="2"/>
+  <polygon points="570,92 578,96 570,100" fill="#475569"/>
+
+  <!-- Phase 3 -->
+  <rect x="582" y="80" width="100" height="32" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="588" y="100" fill="#94a3b8" font-size="11">Phase 3</text>
+  <text x="642" y="100" fill="#06b6d4" font-size="11">Skill构建</text>
+
+  <!-- Arrow -->
+  <line x1="682" y1="96" x2="706" y2="96" stroke="#475569" stroke-width="2"/>
+  <polygon points="706,92 714,96 706,100" fill="#475569"/>
+
+  <!-- Phase 4 -->
+  <rect x="718" y="80" width="100" height="32" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="724" y="100" fill="#94a3b8" font-size="11">Phase 4</text>
+  <text x="774" y="100" fill="#22c55e" font-size="11">质量验证</text>
+
+  <!-- Right side - result output -->
+  <rect x="24" y="140" width="852" height="360" rx="4" fill="rgba(15,23,42,0.6)" stroke="#334155" stroke-width="1"/>
+
+  <!-- Output content -->
+  <text x="40" y="170" fill="#64748b" font-size="11">═══════════════════════════ 锻造完成 ═══════════════════════════</text>
+
+  <text x="40" y="200" fill="#94a3b8" font-size="11">name:</text>
+  <text x="90" y="200" fill="#f97316" font-size="11" font-weight="bold">first-principles-skill</text>
+
+  <text x="40" y="220" fill="#64748b" font-size="11">──────────────────────────────────────────────────────────────</text>
+
+  <text x="40" y="248" fill="#94a3b8" font-size="11">核心原理</text>
+  <text x="110" y="248" fill="#22c55e" font-size="11">4 个</text>
+  <text x="190" y="248" fill="#94a3b8" font-size="11">跨域证据</text>
+  <text x="260" y="248" fill="#22c55e" font-size="11">14 条</text>
+
+  <text x="40" y="272" fill="#e2e8f0" font-size="11">1. 还原到基本事实</text>
+  <text x="260" y="272" fill="#64748b" font-size="11">← Aristotle · Descartes · Musk</text>
+  <text x="40" y="290" fill="#e2e8f0" font-size="11">2. 区分已知与假设</text>
+  <text x="260" y="290" fill="#64748b" font-size="11">← Descartes · Popper · Galileo</text>
+  <text x="40" y="308" fill="#e2e8f0" font-size="11">3. 从基本事实向上推导</text>
+  <text x="260" y="308" fill="#64748b" font-size="11">← Bezos · Satoshi</text>
+  <text x="40" y="326" fill="#e2e8f0" font-size="11">4. 警惕类比推理陷阱</text>
+  <text x="260" y="326" fill="#64748b" font-size="11">← Jobs · Pinker</text>
+
+  <text x="40" y="360" fill="#64748b" font-size="11">──────────────────────────────────────────────────────────────</text>
+
+  <text x="40" y="388" fill="#94a3b8" font-size="11">适用</text>
+  <text x="76" y="388" fill="#e2e8f0" font-size="11">技术创新 ✓</text>
+  <text x="170" y="388" fill="#e2e8f0" font-size="11">商业策略 ✓</text>
+  <text x="264" y="388" fill="#e2e8f0" font-size="11">生涯决策 ✓</text>
+
+  <text x="40" y="410" fill="#94a3b8" font-size="11">不适用</text>
+  <text x="76" y="410" fill="#64748b" font-size="11">日常运营 ✗</text>
+  <text x="170" y="410" fill="#64748b" font-size="11">情感问题 ✗</text>
+
+  <text x="40" y="444" fill="#64748b" font-size="11">──────────────────────────────────────────────────────────────</text>
+
+  <text x="40" y="472" fill="#22c55e" font-size="11" filter="url(#glow)">✓ 质量检查 6/6 通过</text>
+  <text x="230" y="472" fill="#a78bfa" font-size="11" filter="url(#glow)">✓ 一手来源占比 75%</text>
+  <text x="400" y="472" fill="#f59e0b" font-size="11" filter="url(#glow)">✓ 双 Agent 精炼通过</text>
+
+  <!-- Big title at bottom -->
+  <text x="40" y="490" fill="url(#accent)" font-size="12" font-weight="bold" filter="url(#glow)">
+    forge-skill · 工匠式的结构化方法论 Skill 生成引擎
+  </text>
+
+  <!-- Left decorative -->
+  <rect x="8" y="80" width="4" height="40" rx="2" fill="url(#accent)" opacity="0.6"/>
+  <rect x="8" y="140" width="4" height="360" rx="2" fill="url(#accent)" opacity="0.3"/>
+</svg>
