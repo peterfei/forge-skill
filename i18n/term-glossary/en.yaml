@@ -1,0 +1,162 @@
+# forge-skill English term glossary
+# Cross-language lookup for methodology terminology
+
+first_principles:
+  name: First Principles
+  aliases: [first principles thinking, reasoning from first principles, fundamental analysis]
+  origin: Aristotle
+  key_concepts:
+    - term: fundamental truths
+      zh-CN: "基本事实"
+    - term: physical limits
+      zh-CN: "物理极限"
+    - term: reductionism
+      zh-CN: "还原论"
+    - term: analogical reasoning
+      zh-CN: "类比推理"
+
+systems_thinking:
+  name: Systems Thinking
+  aliases: [system dynamics, holistic thinking, systems approach]
+  origin: Ludwig von Bertalanffy
+  key_concepts:
+    - term: causal loop diagram
+      zh-CN: "因果回路图"
+    - term: feedback loop
+      zh-CN: "反馈回路"
+    - term: emergence
+      zh-CN: "涌现"
+    - term: delay effect
+      zh-CN: "延迟效应"
+
+growth_hacking:
+  name: Growth Hacking
+  aliases: [growth engineering, startup growth, growth experimentation]
+  origin: Sean Ellis
+  key_concepts:
+    - term: aha moment
+      zh-CN: "啊哈时刻"
+    - term: north star metric
+      zh-CN: "北极星指标"
+    - term: AARRR funnel
+      zh-CN: "AARRR 漏斗"
+    - term: viral coefficient
+      zh-CN: "病毒系数"
+
+lean_startup:
+  name: Lean Startup
+  aliases: [lean methodology, lean approach, lean method]
+  origin: Eric Ries
+  key_concepts:
+    - term: minimum viable product (MVP)
+      zh-CN: "最小可行产品"
+    - term: build-measure-learn
+      zh-CN: "构建测量学习"
+    - term: pivot
+      zh-CN: "转型"
+    - term: hypothesis validation
+      zh-CN: "验证假设"
+
+design_thinking:
+  name: Design Thinking
+  aliases: [design method, human-centered design, design-driven innovation]
+  origin: Stanford d.school / IDEO
+  key_concepts:
+    - term: empathy
+      zh-CN: "共情"
+    - term: define
+      zh-CN: "定义问题"
+    - term: ideate
+      zh-CN: "构思"
+    - term: prototype
+      zh-CN: "原型"
+
+triz:
+  name: TRIZ
+  aliases: [theory of inventive problem solving, inventive methodology]
+  origin: Genrich Altshuller
+  key_concepts:
+    - term: technical contradiction
+      zh-CN: "技术矛盾"
+    - term: 40 inventive principles
+      zh-CN: "40 个发明原理"
+    - term: contradiction matrix
+      zh-CN: "矛盾矩阵"
+    - term: ideal final result
+      zh-CN: "理想最终结果"
+
+feynman_learning:
+  name: Feynman Learning Technique
+  aliases: [Feynman technique, learn by teaching]
+  origin: Richard Feynman
+  key_concepts:
+    - term: learn by teaching
+      zh-CN: "用教代学"
+    - term: simplify expression
+      zh-CN: "简化表达"
+    - term: knowledge gap identification
+      zh-CN: "知识缺口识别"
+
+kaizen:
+  name: Kaizen
+  aliases: [continuous improvement, continuous change, gemba kaizen]
+  origin: Toyota Production System
+  key_concepts:
+    - term: gemba kaizen
+      zh-CN: "现场改善"
+    - term: standardization
+      zh-CN: "标准化"
+    - term: incremental improvement
+      zh-CN: "小步改进"
+
+premortem:
+  name: Premortem
+  aliases: [premortem analysis, prospective hindsight, pre-mortem]
+  origin: Gary Klein
+  key_concepts:
+    - term: assume failure
+      zh-CN: "假设失败"
+    - term: reverse-engineer causes
+      zh-CN: "反推死因"
+    - term: early warning signals
+      zh-CN: "前兆信号"
+
+five_forces:
+  name: Porter's Five Forces
+  aliases: [five forces analysis, five forces model, competitive forces]
+  origin: Michael Porter
+  key_concepts:
+    - term: barriers to entry
+      zh-CN: "进入壁垒"
+    - term: bargaining power
+      zh-CN: "议价能力"
+    - term: threat of substitutes
+      zh-CN: "替代威胁"
+    - term: industry rivalry
+      zh-CN: "行业竞争"
+
+double_diamond:
+  name: Double Diamond
+  aliases: [diverge-converge model, design process model]
+  origin: British Design Council
+  key_concepts:
+    - term: diverge
+      zh-CN: "发散"
+    - term: converge
+      zh-CN: "收敛"
+    - term: discover
+      zh-CN: "发现"
+    - term: define
+      zh-CN: "定义"
+
+occams_razor:
+  name: Occam's Razor
+  aliases: [Ockham's razor, principle of parsimony, economy principle]
+  origin: William of Ockham
+  key_concepts:
+    - term: simplest hypothesis
+      zh-CN: "最简假设"
+    - term: economy of entities
+      zh-CN: "实体经济"
+    - term: razor principle
+      zh-CN: "剃刀原理"

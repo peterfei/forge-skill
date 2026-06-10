@@ -1,0 +1,162 @@
+# forge-skill 中文术语映射
+# zh-CN term glossary for methodology cross-language lookup
+
+first_principles:
+  name: 第一性原理
+  aliases: [第一性思考, 基本原理, 还原论思考]
+  origin: Aristotle
+  key_concepts:
+    - term: 基本事实
+      en: "fundamental truths"
+    - term: 物理极限
+      en: "physical limits"
+    - term: 还原论
+      en: "reductionism"
+    - term: 类比推理
+      en: "analogical reasoning"
+
+systems_thinking:
+  name: 系统思维
+  aliases: [系统思考, 系统动力学, 整体思维]
+  origin: Ludwig von Bertalanffy
+  key_concepts:
+    - term: 因果回路图
+      en: "causal loop diagram"
+    - term: 反馈回路
+      en: "feedback loop"
+    - term: 涌现
+      en: "emergence"
+    - term: 延迟效应
+      en: "delay effect"
+
+growth_hacking:
+  name: 增长黑客
+  aliases: [增长工程, 创业增长, 增长实验]
+  origin: Sean Ellis
+  key_concepts:
+    - term: 啊哈时刻
+      en: "aha moment"
+    - term: 北极星指标
+      en: "north star metric"
+    - term: AARRR漏斗
+      en: "AARRR funnel"
+    - term: 病毒系数
+      en: "viral coefficient"
+
+lean_startup:
+  name: 精益创业
+  aliases: [精益方法论, 精益启动, Lean 方法]
+  origin: Eric Ries
+  key_concepts:
+    - term: 最小可行产品
+      en: "minimum viable product (MVP)"
+    - term: 构建测量学习
+      en: "build-measure-learn"
+    - term: 转型
+      en: "pivot"
+    - term: 验证假设
+      en: "hypothesis validation"
+
+design_thinking:
+  name: 设计思维
+  aliases: [设计方法, 以人为本的设计, 设计驱动创新]
+  origin: Stanford d.school / IDEO
+  key_concepts:
+    - term: 共情
+      en: "empathy"
+    - term: 定义问题
+      en: "define"
+    - term: 构思
+      en: "ideate"
+    - term: 原型
+      en: "prototype"
+
+triz:
+  name: TRIZ
+  aliases: [发明问题解决理论, 创意解决问题理论, Teoriya Resheniya]
+  origin: Genrich Altshuller
+  key_concepts:
+    - term: 技术矛盾
+      en: "technical contradiction"
+    - term: 40个发明原理
+      en: "40 inventive principles"
+    - term: 矛盾矩阵
+      en: "contradiction matrix"
+    - term: 理想最终结果
+      en: "ideal final result"
+
+feynman_learning:
+  name: 费曼学习法
+  aliases: [费曼技巧, 费曼学习法, 以教代学]
+  origin: Richard Feynman
+  key_concepts:
+    - term: 用教代学
+      en: "learn by teaching"
+    - term: 简化表达
+      en: "simplify expression"
+    - term: 知识缺口识别
+      en: "knowledge gap identification"
+
+kaizen:
+  name: 改善
+  aliases: [Kaizen, 持续改善, 渐进改善]
+  origin: Toyota Production System
+  key_concepts:
+    - term: 现场改善
+      en: "gemba kaizen"
+    - term: 标准化
+      en: "standardization"
+    - term: 小步改进
+      en: "incremental improvement"
+
+premortem:
+  name: 事前验尸
+  aliases: [事前验尸法, 预 mortem, 事前分析]
+  origin: Gary Klein
+  key_concepts:
+    - term: 假设失败
+      en: "assume failure"
+    - term: 反推死因
+      en: "reverse-engineer causes"
+    - term: 前兆信号
+      en: "early warning signals"
+
+five_forces:
+  name: 五力分析
+  aliases: [波特五力, Porter 五力模型, 竞争五力]
+  origin: Michael Porter
+  key_concepts:
+    - term: 进入壁垒
+      en: "barriers to entry"
+    - term: 议价能力
+      en: "bargaining power"
+    - term: 替代威胁
+      en: "threat of substitutes"
+    - term: 行业竞争
+      en: "industry rivalry"
+
+double_diamond:
+  name: 双钻模型
+  aliases: [双钻石模型, 发散收敛模型, Double Diamond]
+  origin: British Design Council
+  key_concepts:
+    - term: 发散
+      en: "diverge"
+    - term: 收敛
+      en: "converge"
+    - term: 发现
+      en: "discover"
+    - term: 定义
+      en: "define"
+
+occams_razor:
+  name: 奥卡姆剃刀
+  aliases: [奥坎剃刀, 简化原则, 如无必要勿增实体]
+  origin: William of Ockham
+  key_concepts:
+    - term: 最简假设
+      en: "simplest hypothesis"
+    - term: 实体经济
+      en: "economy of entities"
+    - term: 剃刀原理
+      en: "razor principle"
