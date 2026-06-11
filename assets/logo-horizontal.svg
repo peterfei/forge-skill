@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" font-family="Menlo, Monaco, 'Courier New', monospace">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="anvilGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="60%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="sparkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="40%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="180" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- === ICON AREA (left 160px) === -->
+  <g transform="translate(80, 90) scale(0.48) translate(-250, -250)">
+    <!-- Forge glow -->
+    <ellipse cx="260" cy="280" rx="100" ry="90" fill="#f97316" opacity="0.08" filter="url(#glowStrong)"/>
+
+    <!-- Anvil -->
+    <path d="
+      M 170 368 L 325 368
+      C 333 340, 326 315, 318 295 L 308 270
+      C 314 230, 311 208, 310 195 L 310 188
+      C 332 168, 355 150, 372 138
+      C 378 142, 374 152, 362 162
+      C 340 178, 318 195, 306 200
+      C 300 202, 295 202, 290 202 L 210 202
+      C 207 240, 198 280, 193 310
+      C 188 340, 182 358, 170 368 Z
+    " fill="url(#anvilGrad)"/>
+
+    <!-- Top face highlight -->
+    <path d="M 208 202 L 290 202" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Face highlight -->
+    <path d="M 272 215 C 278 230, 278 260, 275 275" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+
+    <!-- Spark -->
+    <g filter="url(#glow)">
+      <path d="M 248 108 L 252 128 L 272 132 L 252 136 L 248 156 L 244 136 L 224 132 L 244 128 Z" fill="url(#sparkGrad)"/>
+      <path d="M 248 88 L 250 98 L 260 100 L 250 102 L 248 112 L 246 102 L 236 100 L 246 98 Z" fill="#fef08a" opacity="0.6"/>
+      <circle cx="214" cy="118" r="3" fill="#fbbf24" opacity="0.8"/>
+      <circle cx="282" cy="112" r="2.5" fill="#fbbf24" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- === TEXT AREA (right) === -->
+
+  <!-- "forge-skill" title -->
+  <text x="175" y="90" fill="url(#textGrad)" font-size="44" font-weight="bold" filter="url(#glow)">forge-skill</text>
+
+  <!-- Tagline -->
+  <text x="175" y="125" fill="#94a3b8" font-size="14">
+    methodology → skill
+  </text>
+
+  <!-- Right accent bar -->
+  <rect x="884" y="20" width="4" height="140" rx="2" fill="url(#textGrad)" opacity="0.3"/>
+</svg>

@@ -1,5 +1,7 @@
 # Forge Skill — 锻造任何领域的思维工具
 
+![forge-skill logo](assets/logo-horizontal.svg)
+
 ![forge-skill hero](assets/hero.svg)
 
 > 不是角色扮演一个智者，而是锻造一把可执行的思维工具。

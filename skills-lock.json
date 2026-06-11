@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "first-principles-skill": {
+      "source": "peterfei/forge-skill-first-principles-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "63b109694ffcb649266a2bed057db300e18263cc32aa0ba01dcb3b710466a4a2"
+    }
+  }
+}
