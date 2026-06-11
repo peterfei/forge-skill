@@ -16,7 +16,11 @@ get_chinese_name() {
     premortem-skill)        echo "事前验尸" ;;
     five-forces-skill)      echo "五力分析" ;;
     double-diamond-skill)   echo "双钻模型" ;;
-    occams-razor-skill)     echo "奥卡姆剃刀" ;;
+    occams-razor-skill)        echo "奥卡姆剃刀" ;;
+    cynefin-skill)              echo "Cynefin 框架" ;;
+    second-order-thinking-skill) echo "二阶思维" ;;
+    jtbd-skill)                 echo "JTBD（Jobs to Be Done）" ;;
+    inversion-skill)            echo "逆向思维（Inversion）" ;;
     *) echo "$1" ;;
   esac
 }
@@ -94,7 +98,7 @@ PACKAGE
   rm -rf "$tmp"
 }
 
-echo "🔨 创建 12 个独立 Skill 仓库并推送..."
+echo "🔨 创建独立 Skill 仓库并推送..."
 echo ""
 
 for skill_dir in methods/*-skill/; do
