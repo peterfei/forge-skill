@@ -64,6 +64,7 @@ Phase 5   Dual Agent Refinement → Methodology review + usability review
 | F12 | Occam's Razor | Decision/Simplification | Choose the solution with fewest assumptions given equal explanatory power |
 | F14 | Second-Order Thinking | Decision/Systems | Trace cascading higher-order consequences beyond immediate effects |
 | F16 | Inversion | Decision/Risk | Avoid failure by asking "what causes certain failure" then preventing it |
+| F18 | Lateral Thinking | Creativity/Problem-solving | Break fixed thinking patterns, find creative solutions from unconventional angles |
 
 ### Business & Strategy
 
@@ -74,6 +75,7 @@ Phase 5   Dual Agent Refinement → Methodology review + usability review
 | F8 | Kaizen | Continuous Improvement | Small-step incremental optimization philosophy |
 | F9 | Premortem | Risk Anticipation/Decision | Assume the project failed, reverse-engineer all possible causes |
 | F10 | Five Forces | Competitive Strategy | Assess industry competitive landscape from five dimensions |
+| F17 | SWOT Analysis | Strategy/Planning | Cross-analyze strengths, weaknesses, opportunities, threats to formulate strategy |
 
 ### Design & Innovation
 

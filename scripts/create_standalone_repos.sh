@@ -21,6 +21,8 @@ get_chinese_name() {
     second-order-thinking-skill) echo "二阶思维" ;;
     jtbd-skill)                 echo "JTBD（Jobs to Be Done）" ;;
     inversion-skill)            echo "逆向思维（Inversion）" ;;
+    swot-skill)                 echo "SWOT 分析" ;;
+    lateral-thinking-skill)     echo "横向思维（Lateral Thinking）" ;;
     *) echo "$1" ;;
   esac
 }
