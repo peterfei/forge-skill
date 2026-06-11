@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>forge-skill · Hero Banner</title>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0c0c1d;
+    font-family: -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  }
+
+  /* ═══ Banner ═══ */
+  #banner {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0f0f23 0%, #1a1a2e 40%, #16213e 100%);
+  }
+
+  /* ═══ Background grid ═══ */
+  #gridCanvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 800px; height: 450px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ═══ Spark canvas ═══ */
+  #sparkCanvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 800px; height: 450px;
+    pointer-events: none;
+    z-index: 4;
+  }
+
+  /* ═══ Content layers ═══ */
+  #topLine {
+    position: absolute;
+    z-index: 2;
+    top: 48px;
+    text-align: center;
+    width: 100%;
+    pointer-events: none;
+  }
+  #topLine span {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    color: rgba(148, 163, 184, 0.5);
+    text-transform: uppercase;
+  }
+
+  #methodRow {
+    position: absolute;
+    z-index: 3;
+    top: 140px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .method-tag {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #forgeZone {
+    position: absolute;
+    z-index: 3;
+    top: 0; left: 0;
+    width: 800px; height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  #brandMain {
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    background: linear-gradient(135deg, #f97316 0%, #f59e0b 40%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(249, 115, 22, 0.4));
+    transition: filter 0.4s;
+  }
+
+  #brandSub {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: rgba(226, 232, 240, 0.55);
+    margin-top: 10px;
+  }
+
+  /* ── Terminal logo block ── */
+  #terminalLogo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  #terminalLogo .prompt {
+    font-size: 13px;
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+    color: rgba(148, 163, 184, 0.6);
+    letter-spacing: 0.03em;
+  }
+  #terminalLogo .cmd {
+    font-size: 14px;
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+    font-weight: bold;
+    color: #f97316;
+    margin-left: 6px;
+  }
+  #terminalLogo .arrow {
+    font-size: 13px;
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+    color: rgba(148, 163, 184, 0.4);
+    margin: 0 8px;
+  }
+  #terminalLogo .progress {
+    font-size: 11px;
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+    color: rgba(234, 179, 8, 0.7);
+    letter-spacing: 0.1em;
+  }
+
+  #bottomMark {
+    position: absolute;
+    z-index: 5;
+    bottom: 28px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+  }
+  #bottomMark span {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: rgba(148, 163, 184, 0.18);
+  }
+
+  /* ═══ Progress dots ═══ */
+  #dots {
+    position: absolute;
+    z-index: 5;
+    bottom: 46px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    pointer-events: none;
+  }
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #334155;
+    transition: all 0.5s ease;
+  }
+  .dot.on {
+    background: #f97316;
+    box-shadow: 0 0 6px rgba(249, 115, 22, 0.7);
+  }
+</style>
+</head>
+<body>
+
+<div id="banner">
+  <canvas id="gridCanvas"></canvas>
+  <canvas id="sparkCanvas"></canvas>
+
+  <div id="topLine"><span>方法论 → 锻造 → Skill</span></div>
+  <div id="methodRow"><!-- filled by JS --></div>
+
+  <div id="forgeZone">
+    <div id="brandMain">forge-skill</div>
+    <div id="brandSub">锻造任何领域的思维工具</div>
+    <div id="terminalLogo">
+      <span class="prompt">$</span>
+      <span class="cmd">forge</span>
+      <span class="arrow">→</span>
+      <span class="prompt">&gt;</span>
+      <span class="cmd">skill</span>
+      <span class="progress">▰▰▰▰▰▰▰▰▰▰ 100%</span>
+    </div>
+  </div>
+
+  <div id="bottomMark"><span>forge-skill</span></div>
+  <div id="dots"><!-- filled by JS --></div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  const W = 800, H = 450;
+  const CYCLE_DURATION = 8; // seconds per method group
+  const METHOD_SETS = [
+    ['第一性原理', '系统思维', 'TRIZ', '费曼学习法', '事前验尸', '奥卡姆剃刀'],
+    ['增长黑客', '精益创业', '设计思维', '双钻模型', 'JTBD', 'SWOT 分析'],
+    ['五力分析', '改善（Kaizen）', 'Cynefin 框架', '二阶思维', '逆向思维', '横向思维'],
+  ];
+  const TOTAL_DURATION = CYCLE_DURATION * METHOD_SETS.length;
+
+  /* ── Easing ── */
+  const E = {
+    outExpo: t => t >= 1 ? 1 : 1 - Math.pow(2, -10 * t),
+    inOutCubic: t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2,
+    outBack: t => { const c=1.70158; return 1 + (c+1)*Math.pow(t-1,3) + c*Math.pow(t-1,2); },
+    inOutQuad: t => t < .5 ? 2*t*t : 1 - Math.pow(-2*t+2,2)/2,
+  };
+  const clamp = (v,l,h) => v<l?l:v>h?h:v;
+  const lerp  = (a,b,t) => a + (b-a)*t;
+  const pnorm = (p,s,e) => clamp((p-s)/(e-s), 0, 1);
+
+  /* ── DOM ── */
+  const methodRow  = document.getElementById('methodRow');
+  const brandMain  = document.getElementById('brandMain');
+  const brandSub   = document.getElementById('brandSub');
+  const terminalLogo = document.getElementById('terminalLogo');
+  const forgeZone  = document.getElementById('forgeZone');
+  const dotsContainer = document.getElementById('dots');
+  const gridCv     = document.getElementById('gridCanvas');
+  const gridCtx    = gridCv.getContext('2d');
+  const sparkCv    = document.getElementById('sparkCanvas');
+  const sparkCtx   = sparkCv.getContext('2d');
+  gridCv.width  = W; gridCv.height = H;
+  sparkCv.width = W; sparkCv.height = H;
+
+  /* ── Draw static grid ── */
+  (function drawGrid() {
+    gridCtx.strokeStyle = 'rgba(51, 65, 85, 0.12)';
+    gridCtx.lineWidth = 0.5;
+    const step = 40;
+    for (let x = 0; x <= W; x += step) {
+      gridCtx.beginPath(); gridCtx.moveTo(x,0); gridCtx.lineTo(x,H); gridCtx.stroke();
+    }
+    for (let y = 0; y <= H; y += step) {
+      gridCtx.beginPath(); gridCtx.moveTo(0,y); gridCtx.lineTo(W,y); gridCtx.stroke();
+    }
+    // Accent grid lines at interesting positions
+    gridCtx.strokeStyle = 'rgba(249, 115, 22, 0.06)';
+    gridCtx.lineWidth = 1;
+    [120, 200, 280, 360].forEach(y => {
+      gridCtx.beginPath(); gridCtx.moveTo(0,y); gridCtx.lineTo(W,y); gridCtx.stroke();
+    });
+  })();
+
+  /* ── Setup tags & dots ── */
+  let tags = [];
+  let currentSetIdx = -1;
+
+  function buildTags(setIdx) {
+    methodRow.innerHTML = '';
+    tags = [];
+    METHOD_SETS[setIdx].forEach(name => {
+      const el = document.createElement('span');
+      el.className = 'method-tag';
+      el.textContent = name;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(8px)';
+      el.style.color = '#e2e8f0';
+      el.style.background = 'rgba(30, 41, 59, 0.6)';
+      el.style.border = '1px solid rgba(71, 85, 105, 0.3)';
+      methodRow.appendChild(el);
+      tags.push(el);
+    });
+  }
+
+  (function buildDots() {
+    dotsContainer.innerHTML = '';
+    const total = METHOD_SETS.length;
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot';
+      dotsContainer.appendChild(d);
+    }
+  })();
+  const dotEls = dotsContainer.querySelectorAll('.dot');
+
+  /* ── Particles ── */
+  const particles = [], flashes = [];
+  const S = ['#fef08a','#fbbf24','#f59e0b','#f97316','#ea580c','#ef4444'];
+
+  function spawnBurst(cx, cy, count, mult) {
+    mult = mult || 1;
+    for (let i = 0; i < count; i++) {
+      const a = (Math.random()-0.5)*2.8 - Math.PI/2*(Math.random()>0.3?1:0);
+      const s = (1.5+Math.random()*4.5)*mult;
+      particles.push({
+        x:cx, y:cy, px:cx, py:cy,
+        vx: Math.cos(a)*s, vy: Math.sin(a)*s,
+        life: 1, decay: 0.006+Math.random()*0.016,
+        size: 0.6+Math.random()*2.5*mult,
+        color: S[Math.floor(Math.random()*S.length)]
+      });
+    }
+  }
+
+  function spawnGlow(cx, cy, r, a) {
+    flashes.push({ x:cx, y:cy, r, a, life:1, decay:0.025+Math.random()*0.03 });
+  }
+
+  function emitSustain(cx, cy) {
+    if (Math.random() < 0.3) {
+      spawnBurst(cx + (Math.random()-0.5)*30, cy + (Math.random()-0.5)*15, 3, 0.5);
+    }
+    if (Math.random() < 0.08) spawnGlow(cx + (Math.random()-0.5)*25, cy, 14, 0.35);
+  }
+
+  function tickParticles() {
+    for (let i = particles.length-1; i>=0; i--) {
+      const p = particles[i];
+      p.px=p.x; p.py=p.y; p.x+=p.vx; p.y+=p.vy;
+      p.vy += 0.05; p.vx *= 0.997; p.vy *= 0.997;
+      p.life -= p.decay;
+      if (p.life <= 0) particles.splice(i,1);
+    }
+    for (let i = flashes.length-1; i>=0; i--) {
+      flashes[i].life -= flashes[i].decay;
+      if (flashes[i].life <= 0) flashes.splice(i,1);
+    }
+  }
+
+  function drawParticles() {
+    const ctx = sparkCtx;
+    ctx.clearRect(0,0,W,H);
+    for (const f of flashes) {
+      const a = f.life*f.a, r = f.r*(0.2+f.life*0.8);
+      const g = ctx.createRadialGradient(f.x,f.y,0,f.x,f.y,r*3.5);
+      g.addColorStop(0, `rgba(254,240,138,${a})`);
+      g.addColorStop(0.25, `rgba(249,115,22,${a*0.6})`);
+      g.addColorStop(0.55, `rgba(239,68,68,${a*0.15})`);
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(f.x,f.y,r*3.5,0,Math.PI*2); ctx.fill();
+    }
+    for (const p of particles) {
+      ctx.save(); ctx.globalAlpha = p.life;
+      if (p.life > 0.25) {
+        ctx.strokeStyle = p.color; ctx.globalAlpha = p.life*0.3;
+        ctx.lineWidth = p.size*p.life*0.5;
+        ctx.beginPath(); ctx.moveTo(p.px,p.py); ctx.lineTo(p.x,p.y); ctx.stroke();
+        ctx.globalAlpha = p.life;
+      }
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color; ctx.shadowBlur = 3;
+      const sz = p.size*(0.2+p.life*0.8);
+      ctx.beginPath(); ctx.arc(p.x,p.y,sz,0,Math.PI*2); ctx.fill();
+      if (p.life > 0.5) {
+        ctx.globalAlpha = p.life*0.2; ctx.shadowBlur = 8;
+        ctx.beginPath(); ctx.arc(p.x,p.y,sz*2.8,0,Math.PI*2); ctx.fill();
+      }
+      ctx.restore();
+    }
+  }
+
+  /* ── State ── */
+  let playing = false, time = 0, lastTick = null;
+  let forgeFired_0=false, forgeFired_1=false, forgeFired_2=false;
+
+  /* ── Render ── */
+  function render(t) {
+    const phase = t % CYCLE_DURATION;
+    const setIdx = Math.floor(t / CYCLE_DURATION) % METHOD_SETS.length;
+
+    // Switch method set
+    if (setIdx !== currentSetIdx) {
+      currentSetIdx = setIdx;
+      buildTags(setIdx);
+      dotEls.forEach((d,i) => d.classList.toggle('on', i===setIdx));
+      forgeFired_0 = false;
+      forgeFired_1 = false;
+      forgeFired_2 = false;
+      brandMain.style.opacity = '0';
+      terminalLogo.style.opacity = '0';
+    }
+
+    const inP = (s,e) => phase >= s && phase < e;
+
+    // ── Phase 0: Tag entrance (0 → 2.0s) ──
+    if (phase < 2.0) {
+      brandMain.style.opacity = '0';
+      brandMain.style.transform = 'scale(0.6)';
+      terminalLogo.style.opacity = '0';
+      tags.forEach((tag, i) => {
+        const stagger = i * 0.18;
+        const tp = clamp((phase - stagger) / 0.8, 0, 1);
+        const op = E.outExpo(tp);
+        const tr = (1-op)*12;
+        tag.style.opacity = op;
+        tag.style.transform = `translateY(${tr}px)`;
+        tag.style.background = 'rgba(30, 41, 59, 0.6)';
+        tag.style.border = '1px solid rgba(71, 85, 105, 0.3)';
+        tag.style.color = '#e2e8f0';
+      });
+    }
+
+    // ── Phase 1: Tags glow up (2.0 → 3.0s) ──
+    else if (inP(2.0, 3.0)) {
+      brandMain.style.opacity = '0';
+      terminalLogo.style.opacity = '0';
+      const t1 = pnorm(phase, 2.0, 3.0);
+      tags.forEach((tag, i) => {
+        const stagger = i * 0.08;
+        const tp = clamp((t1 - stagger) / 0.7, 0, 1);
+        const hot = E.outExpo(tp);
+        tag.style.opacity = 1;
+        tag.style.transform = 'translateY(0px)';
+        tag.style.background = hot > 0.5
+          ? `rgba(249, 115, 22, ${0.08 + hot * 0.15})`
+          : 'rgba(30, 41, 59, 0.6)';
+        tag.style.border = hot > 0.5
+          ? '1px solid rgba(249, 115, 22, 0.6)'
+          : '1px solid rgba(71, 85, 105, 0.3)';
+        tag.style.color = hot > 0.7 ? '#fbbf24' : '#e2e8f0';
+      });
+    }
+
+    // ── Phase 2: Forge burst (3.0 → 5.5s) ──
+    else if (inP(3.0, 5.5)) {
+      const t2 = pnorm(phase, 3.0, 5.5);
+      const cx = W/2, cy = H/2;
+
+      // Tags fade away
+      tags.forEach((tag, i) => {
+        const ft = clamp((t2 - i*0.04) / 0.6, 0, 1);
+        if (ft >= 1) {
+          tag.style.opacity = '0';
+          tag.style.transform = 'translateY(-8px)';
+        } else {
+          tag.style.opacity = 1 - ft;
+        }
+      });
+
+      // Wave 1: Initial burst (3.0 → 3.35)
+      if (inP(3.0, 3.35) && !forgeFired_0) {
+        spawnBurst(cx, cy, 40, 1.8);
+        spawnGlow(cx, cy, 30, 0.9);
+        forgeFired_0 = true;
+      }
+      // Wave 2: Secondary (3.3 → 3.8)
+      if (inP(3.3, 3.8) && !forgeFired_1) {
+        spawnBurst(cx, cy, 25, 1.2);
+        spawnGlow(cx, cy, 22, 0.6);
+        forgeFired_1 = true;
+      }
+      // Wave 3: Final burst (3.8 → 4.2)
+      if (inP(3.8, 4.2) && !forgeFired_2) {
+        spawnBurst(cx, cy, 30, 1.5);
+        spawnGlow(cx, cy, 25, 0.75);
+        forgeFired_2 = true;
+      }
+
+      // Sustain embers
+      if (inP(3.3, 5.0)) emitSustain(cx, cy);
+
+      // forge-skill reveal (3.8 → 5.0)
+      const sr = clamp((phase - 3.8) / 1.2, 0, 1);
+      const srop = E.outBack(sr);
+      brandMain.style.opacity = srop;
+      brandMain.style.transform = `scale(${0.55+0.45*srop})`;
+      brandMain.style.filter = `drop-shadow(0 0 ${8+srop*28}px rgba(249,115,22,${0.2+srop*0.5}))`;
+      terminalLogo.style.opacity = '0';
+    }
+
+    // ── Phase 3: Solid display / logo reveal (5.5 → 7.0s) ──
+    else if (inP(5.5, 7.0)) {
+      brandMain.style.opacity = 1;
+      brandMain.style.transform = 'scale(1)';
+      brandMain.style.filter = 'drop-shadow(0 0 24px rgba(249,115,22,0.5))';
+      // Terminal logo fades in
+      const loT = clamp((phase - 5.8) / 0.6, 0, 1);
+      terminalLogo.style.opacity = E.outExpo(loT);
+      tags.forEach(t => { t.style.opacity = '0'; });
+    }
+
+    // ── Phase 4: Fade out (7.0 → 8.0s) ──
+    else {
+      const t4 = pnorm(phase, 7.0, CYCLE_DURATION);
+      const op = 1 - E.inOutQuad(t4);
+      brandMain.style.opacity = op;
+      brandMain.style.transform = `scale(${lerp(1,0.55,1-op)})`;
+      brandMain.style.filter = `drop-shadow(0 0 ${24*op}px rgba(249,115,22,${0.5*op}))`;
+      terminalLogo.style.opacity = op;
+      tags.forEach(t => { t.style.opacity = '0'; });
+    }
+  }
+
+  /* ── Loop ── */
+  function tick(now) {
+    if (lastTick === null) { lastTick=now; window.__ready=true; render(0); requestAnimationFrame(tick); return; }
+    const dt = (now-lastTick)/1000; lastTick=now;
+    if (playing) {
+      let t = time+dt;
+      if (t >= TOTAL_DURATION) {
+        t = window.__recording ? TOTAL_DURATION-0.001 : t % TOTAL_DURATION;
+        particles.length=0; flashes.length=0;
+        forgeFired_0=forgeFired_1=forgeFired_2=false;
+      }
+      time=t; render(time); tickParticles(); drawParticles();
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* ── Init ── */
+  forgeZone.style.opacity = '1';
+  brandMain.style.opacity = '0';
+  brandMain.style.transform = 'scale(0.6)';
+  terminalLogo.style.opacity = '0';
+  buildTags(0); currentSetIdx = 0;
+  dotEls[0].classList.add('on');
+  render(0);
+
+  document.fonts.ready.then(() => {
+    playing = true;
+    requestAnimationFrame(tick);
+  });
+
+  window.__seek = function(t) {
+    particles.length=0; flashes.length=0;
+    forgeFired_0=forgeFired_1=forgeFired_2=false;
+    time=t; lastTick=null;
+    currentSetIdx = Math.floor(t/CYCLE_DURATION) % METHOD_SETS.length;
+    buildTags(currentSetIdx);
+    dotEls.forEach((d,i) => d.classList.toggle('on', i===currentSetIdx));
+    render(t); drawParticles();
+  };
+})();
+</script>
+</body>
+</html>

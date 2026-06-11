@@ -2,7 +2,9 @@
 
 ![forge-skill logo](assets/logo-horizontal.svg)
 
-![forge-skill hero](assets/hero.svg)
+<p align="center">
+  <img src="assets/readme-banner.gif" alt="forge-skill · 从方法论到 Skill 的锻造过程" width="800" />
+</p>
 
 > 不是角色扮演一个智者，而是锻造一把可执行的思维工具。
 > 输入方法论名称或模糊需求，自动深度调研 → 方法论结构化提炼 → 生成可运行的思维工具 Skill。

@@ -6,6 +6,12 @@
       "sourceType": "github",
       "skillPath": "SKILL.md",
       "computedHash": "63b109694ffcb649266a2bed057db300e18263cc32aa0ba01dcb3b710466a4a2"
+    },
+    "huashu-design": {
+      "source": "alchaincyf/huashu-design",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "7b49357769e960546bbdb326ee33867959ad67b9395a033b2c2cf61bce36a9aa"
     }
   }
 }
