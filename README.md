@@ -84,6 +84,7 @@ Phase 5  双 Agent 精炼 → 方法论评审 + 可用性评审
 | F20 | [蓝海战略](https://github.com/peterfei/forge-skill-blue-ocean-strategy-skill) | 战略创新/竞争突围 | 价值创新开创无人争抢的市场空间 | `npx skills add peterfei/forge-skill-blue-ocean-strategy-skill` |
 | F21 | [商业模式画布](https://github.com/peterfei/forge-skill-business-model-canvas-skill) | 商业设计/创业 | 9 个构造块系统化描述商业逻辑 | `npx skills add peterfei/forge-skill-business-model-canvas-skill` |
 | F22 | [价值链分析](https://github.com/peterfei/forge-skill-value-chain-skill) | 竞争优势/成本优化 | 分解企业活动，识别成本与差异化来源 | `npx skills add peterfei/forge-skill-value-chain-skill` |
+| F24 | [OKR](https://github.com/peterfei/forge-skill-okr-skill) | 目标管理/组织协同 | 聚焦少数要事，量化可测量的目标与关键结果 | `npx skills add peterfei/forge-skill-okr-skill` |
 
 ### 设计与创新
 
@@ -99,6 +100,7 @@ Phase 5  双 Agent 精炼 → 方法论评审 + 可用性评审
 |---|--------|------|-----------|------|
 | F6 | [TRIZ](https://github.com/peterfei/forge-skill-triz-skill) | 工程创新/矛盾解决 | 40 个发明原理系统化解决技术矛盾 | `npx skills add peterfei/forge-skill-triz-skill` |
 | F13 | [Cynefin 框架](https://github.com/peterfei/forge-skill-cynefin-skill) | 决策/复杂度分类 | 按 5 域分类匹配决策策略，避免跨域误判 | `npx skills add peterfei/forge-skill-cynefin-skill` |
+| F14 | [场景规划](https://github.com/peterfei/forge-skill-scenario-planning-skill) | 战略前瞻/不确定性决策 | 构建多个合理未来场景，改变心智模型应对深度不确定性 | `npx skills add peterfei/forge-skill-scenario-planning-skill` |
 | F23 | [5 Whys](https://github.com/peterfei/forge-skill-five-whys-skill) | 根因分析/质量改进 | 连续追问穿透表面症状，定位系统性根因 | `npx skills add peterfei/forge-skill-five-whys-skill` |
 
 ## 生态

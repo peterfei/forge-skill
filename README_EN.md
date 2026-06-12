@@ -82,6 +82,7 @@ Phase 5   Dual Agent Refinement → Methodology review + usability review
 | F20 | [Blue Ocean Strategy](https://github.com/peterfei/forge-skill-blue-ocean-strategy-skill) | Strategic Innovation | Create uncontested market space through value innovation | `npx skills add peterfei/forge-skill-blue-ocean-strategy-skill` |
 | F21 | [Business Model Canvas](https://github.com/peterfei/forge-skill-business-model-canvas-skill) | Business Design/Startup | Describe business logic through 9 building blocks | `npx skills add peterfei/forge-skill-business-model-canvas-skill` |
 | F22 | [Value Chain Analysis](https://github.com/peterfei/forge-skill-value-chain-skill) | Competitive Advantage/Cost | Decompose firm activities to identify cost and differentiation sources | `npx skills add peterfei/forge-skill-value-chain-skill` |
+| F24 | [OKR](https://github.com/peterfei/forge-skill-okr-skill) | Goal Management/Organization Alignment | Focus on vital few, quantify measurable objectives and key results | `npx skills add peterfei/forge-skill-okr-skill` |
 
 ### Design & Innovation
 
@@ -97,6 +98,7 @@ Phase 5   Dual Agent Refinement → Methodology review + usability review
 |---|-------------|--------|---------------------|---------|
 | F6 | [TRIZ](https://github.com/peterfei/forge-skill-triz-skill) | Engineering/Contradiction Resolution | 40 invention principles for systematic resolution of technical contradictions | `npx skills add peterfei/forge-skill-triz-skill` |
 | F13 | [Cynefin](https://github.com/peterfei/forge-skill-cynefin-skill) | Decision/Complexity | Classify problems into 5 domains, match decision strategy to domain | `npx skills add peterfei/forge-skill-cynefin-skill` |
+| F14 | [Scenario Planning](https://github.com/peterfei/forge-skill-scenario-planning-skill) | Strategic Foresight/Uncertainty Decisions | Build multiple plausible future scenarios, reframe mental models for deep uncertainty | `npx skills add peterfei/forge-skill-scenario-planning-skill` |
 | F23 | [5 Whys](https://github.com/peterfei/forge-skill-five-whys-skill) | Root Cause Analysis/Quality | Drill through surface symptoms via repeated questioning to locate systemic root causes | `npx skills add peterfei/forge-skill-five-whys-skill` |
 
 ## Ecosystem
