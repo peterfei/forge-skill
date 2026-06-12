@@ -54,43 +54,50 @@ Phase 5   Dual Agent Refinement → Methodology review + usability review
 
 ## Methodology Library
 
+> Click the methodology name to visit its standalone repo. Copy the install command to add it to your Agent Skills toolkit.
+
 ### Thinking Tools
 
-| # | Methodology | Domain | One-line Description |
-|---|-------------|--------|---------------------|
-| F1 | First Principles | Problem-solving/Innovation | Reduce to fundamental truths, reason up from physical limits |
-| F2 | Systems Thinking | Complex Systems | See overall structure and feedback loops through causal loop diagrams |
-| F7 | Feynman Learning Technique | Learning/Teaching | Test your understanding by teaching it to others |
-| F12 | Occam's Razor | Decision/Simplification | Choose the solution with fewest assumptions given equal explanatory power |
-| F14 | Second-Order Thinking | Decision/Systems | Trace cascading higher-order consequences beyond immediate effects |
-| F16 | Inversion | Decision/Risk | Avoid failure by asking "what causes certain failure" then preventing it |
-| F18 | Lateral Thinking | Creativity/Problem-solving | Break fixed thinking patterns, find creative solutions from unconventional angles |
+| # | Methodology | Domain | One-line Description | Install |
+|---|-------------|--------|---------------------|---------|
+| F1 | [First Principles](https://github.com/peterfei/forge-skill-first-principles-skill) | Problem-solving/Innovation | Reduce to fundamental truths, reason up from physical limits | `npx skills add peterfei/forge-skill-first-principles-skill` |
+| F2 | [Systems Thinking](https://github.com/peterfei/forge-skill-systems-thinking-skill) | Complex Systems | See overall structure and feedback loops through causal loop diagrams | `npx skills add peterfei/forge-skill-systems-thinking-skill` |
+| F7 | [Feynman Learning Technique](https://github.com/peterfei/forge-skill-feynman-learning-skill) | Learning/Teaching | Test your understanding by teaching it to others | `npx skills add peterfei/forge-skill-feynman-learning-skill` |
+| F12 | [Occam's Razor](https://github.com/peterfei/forge-skill-occams-razor-skill) | Decision/Simplification | Choose the solution with fewest assumptions given equal explanatory power | `npx skills add peterfei/forge-skill-occams-razor-skill` |
+| F14 | [Second-Order Thinking](https://github.com/peterfei/forge-skill-second-order-thinking-skill) | Decision/Systems | Trace cascading higher-order consequences beyond immediate effects | `npx skills add peterfei/forge-skill-second-order-thinking-skill` |
+| F16 | [Inversion](https://github.com/peterfei/forge-skill-inversion-skill) | Decision/Risk | Avoid failure by asking "what causes certain failure" then preventing it | `npx skills add peterfei/forge-skill-inversion-skill` |
+| F18 | [Lateral Thinking](https://github.com/peterfei/forge-skill-lateral-thinking-skill) | Creativity/Problem-solving | Break fixed thinking patterns, find creative solutions from unconventional angles | `npx skills add peterfei/forge-skill-lateral-thinking-skill` |
+| F19 | [Pareto Principle](https://github.com/peterfei/forge-skill-pareto-principle-skill) | Resource Focus/Optimization | Identify the vital few, concentrate resources for non-linear returns | `npx skills add peterfei/forge-skill-pareto-principle-skill` |
 
 ### Business & Strategy
 
-| # | Methodology | Domain | One-line Description |
-|---|-------------|--------|---------------------|
-| F3 | Growth Hacking | Product Growth/Retention | Data-driven experimentation cycles to find growth levers |
-| F4 | Lean Startup | Startup Validation | Validate hypotheses rapidly with minimum viable products |
-| F8 | Kaizen | Continuous Improvement | Small-step incremental optimization philosophy |
-| F9 | Premortem | Risk Anticipation/Decision | Assume the project failed, reverse-engineer all possible causes |
-| F10 | Five Forces | Competitive Strategy | Assess industry competitive landscape from five dimensions |
-| F17 | SWOT Analysis | Strategy/Planning | Cross-analyze strengths, weaknesses, opportunities, threats to formulate strategy |
+| # | Methodology | Domain | One-line Description | Install |
+|---|-------------|--------|---------------------|---------|
+| F3 | [Growth Hacking](https://github.com/peterfei/forge-skill-growth-hacking-skill) | Product Growth/Retention | Data-driven experimentation cycles to find growth levers | `npx skills add peterfei/forge-skill-growth-hacking-skill` |
+| F4 | [Lean Startup](https://github.com/peterfei/forge-skill-lean-startup-skill) | Startup Validation | Validate hypotheses rapidly with minimum viable products | `npx skills add peterfei/forge-skill-lean-startup-skill` |
+| F8 | [Kaizen](https://github.com/peterfei/forge-skill-kaizen-skill) | Continuous Improvement | Small-step incremental optimization philosophy | `npx skills add peterfei/forge-skill-kaizen-skill` |
+| F9 | [Premortem](https://github.com/peterfei/forge-skill-premortem-skill) | Risk Anticipation/Decision | Assume the project failed, reverse-engineer all possible causes | `npx skills add peterfei/forge-skill-premortem-skill` |
+| F10 | [Five Forces](https://github.com/peterfei/forge-skill-five-forces-skill) | Competitive Strategy | Assess industry competitive landscape from five dimensions | `npx skills add peterfei/forge-skill-five-forces-skill` |
+| F17 | [SWOT Analysis](https://github.com/peterfei/forge-skill-swot-skill) | Strategy/Planning | Cross-analyze strengths, weaknesses, opportunities, threats to formulate strategy | `npx skills add peterfei/forge-skill-swot-skill` |
+| F20 | [Blue Ocean Strategy](https://github.com/peterfei/forge-skill-blue-ocean-strategy-skill) | Strategic Innovation | Create uncontested market space through value innovation | `npx skills add peterfei/forge-skill-blue-ocean-strategy-skill` |
+| F21 | [Business Model Canvas](https://github.com/peterfei/forge-skill-business-model-canvas-skill) | Business Design/Startup | Describe business logic through 9 building blocks | `npx skills add peterfei/forge-skill-business-model-canvas-skill` |
+| F22 | [Value Chain Analysis](https://github.com/peterfei/forge-skill-value-chain-skill) | Competitive Advantage/Cost | Decompose firm activities to identify cost and differentiation sources | `npx skills add peterfei/forge-skill-value-chain-skill` |
 
 ### Design & Innovation
 
-| # | Methodology | Domain | One-line Description |
-|---|-------------|--------|---------------------|
-| F5 | Design Thinking | Product Design/Innovation | Five-step innovation framework starting from user empathy |
-| F11 | Double Diamond | Design Process/Problem Definition | Diverge→converge→diverge→converge structured process |
-| F15 | JTBD | Product Design/Needs | People "hire" products to get jobs done, not buy features |
+| # | Methodology | Domain | One-line Description | Install |
+|---|-------------|--------|---------------------|---------|
+| F5 | [Design Thinking](https://github.com/peterfei/forge-skill-design-thinking-skill) | Product Design/Innovation | Five-step innovation framework starting from user empathy | `npx skills add peterfei/forge-skill-design-thinking-skill` |
+| F11 | [Double Diamond](https://github.com/peterfei/forge-skill-double-diamond-skill) | Design Process/Problem Definition | Diverge→converge→diverge→converge structured process | `npx skills add peterfei/forge-skill-double-diamond-skill` |
+| F15 | [JTBD](https://github.com/peterfei/forge-skill-jtbd-skill) | Product Design/Needs | People "hire" products to get jobs done, not buy features | `npx skills add peterfei/forge-skill-jtbd-skill` |
 
 ### Problem Solving
 
-| # | Methodology | Domain | One-line Description |
-|---|-------------|--------|---------------------|
-| F6 | TRIZ | Engineering/Contradiction Resolution | 40 invention principles for systematic resolution of technical contradictions |
-| F13 | Cynefin | Decision/Complexity | Classify problems into 5 domains, match decision strategy to domain |
+| # | Methodology | Domain | One-line Description | Install |
+|---|-------------|--------|---------------------|---------|
+| F6 | [TRIZ](https://github.com/peterfei/forge-skill-triz-skill) | Engineering/Contradiction Resolution | 40 invention principles for systematic resolution of technical contradictions | `npx skills add peterfei/forge-skill-triz-skill` |
+| F13 | [Cynefin](https://github.com/peterfei/forge-skill-cynefin-skill) | Decision/Complexity | Classify problems into 5 domains, match decision strategy to domain | `npx skills add peterfei/forge-skill-cynefin-skill` |
+| F23 | [5 Whys](https://github.com/peterfei/forge-skill-five-whys-skill) | Root Cause Analysis/Quality | Drill through surface symptoms via repeated questioning to locate systemic root causes | `npx skills add peterfei/forge-skill-five-whys-skill` |
 
 ## Ecosystem
 

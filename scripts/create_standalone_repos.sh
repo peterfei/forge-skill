@@ -23,6 +23,11 @@ get_chinese_name() {
     inversion-skill)            echo "逆向思维（Inversion）" ;;
     swot-skill)                 echo "SWOT 分析" ;;
     lateral-thinking-skill)     echo "横向思维（Lateral Thinking）" ;;
+    five-whys-skill)             echo "5 Whys（五个为什么）" ;;
+    pareto-principle-skill)      echo "帕累托法则（80/20）" ;;
+    blue-ocean-strategy-skill)   echo "蓝海战略（Blue Ocean Strategy）" ;;
+    business-model-canvas-skill) echo "商业模式画布（BMC）" ;;
+    value-chain-skill)           echo "价值链分析（Value Chain）" ;;
     *) echo "$1" ;;
   esac
 }
