@@ -67,7 +67,8 @@ Phase 5  双 Agent 精炼 → 方法论评审 + 可用性评审
 | F7 | [费曼学习法](https://github.com/peterfei/forge-skill-feynman-learning-skill) | 学习/教学 | 用教别人的方式检验自己是否真正理解 | `npx skills add peterfei/forge-skill-feynman-learning-skill` |
 | F12 | [奥卡姆剃刀](https://github.com/peterfei/forge-skill-occams-razor-skill) | 决策/简化 | 在同等解释力下选择最少假设的方案 | `npx skills add peterfei/forge-skill-occams-razor-skill` |
 | F14 | [二阶思维](https://github.com/peterfei/forge-skill-second-order-thinking-skill) | 决策/系统分析 | 推演决策的连锁高阶后果，而非只看直接效果 | `npx skills add peterfei/forge-skill-second-order-thinking-skill` |
-| F16 | [逆向思维](https://github.com/peterfei/forge-skill-inversion-skill) | 决策/风险预判 | 不问"怎么赢"，问"怎么死"然后避开 | `npx skills add peterfei/forge-skill-inversion-skill` |
+| F16 | [逆向思维](https://github.com/peterfei/forge-skill-inversion-thinking-skill) | 决策/风险预判 | 通过翻转问题视角，从反面思考来发现隐藏风险和解决方案 | `npx skills add peterfei/forge-skill-inversion-thinking-skill` |
+| F25 | [心智模型融合](https://github.com/peterfei/forge-skill-mental-model-fusion-skill) | 元方法论/多学科思维 | 整合多学科核心心智模型形成网格化知识结构，避免锤人综合征 | `npx skills add peterfei/forge-skill-mental-model-fusion-skill` |
 | F18 | [横向思维](https://github.com/peterfei/forge-skill-lateral-thinking-skill) | 创意/问题解决 | 打破固有思维定式，从非传统角度寻找创造性解法 | `npx skills add peterfei/forge-skill-lateral-thinking-skill` |
 | F19 | [帕累托法则](https://github.com/peterfei/forge-skill-pareto-principle-skill) | 资源聚焦/优化 | 识别关键少数，集中资源获取非线性回报 | `npx skills add peterfei/forge-skill-pareto-principle-skill` |
 
