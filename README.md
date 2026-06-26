@@ -93,7 +93,7 @@ Phase 5  双 Agent 精炼 → 方法论评审 + 可用性评审
 |---|--------|------|-----------|------|
 | F5 | [设计思维](https://github.com/peterfei/forge-skill-design-thinking-skill) | 产品设计/创新 | 以用户共情为起点的五步创新框架 | `npx skills add peterfei/forge-skill-design-thinking-skill` |
 | F11 | [双钻模型](https://github.com/peterfei/forge-skill-double-diamond-skill) | 设计流程/问题定义 | 发散→收敛→发散→收敛的结构化流程 | `npx skills add peterfei/forge-skill-double-diamond-skill` |
-| F15 | [JTBD](https://github.com/peterfei/forge-skill-jtbd-skill) | 产品设计/需求分析 | 用户不是买产品，而是"雇佣"产品完成特定任务 | `npx skills add peterfei/forge-skill-jtbd-skill` |
+| F17 | [JTBD](https://github.com/peterfei/forge-skill-jtbd-skill) | 产品设计/需求分析 | 用户不是买产品，而是"雇佣"产品完成特定任务 | `npx skills add peterfei/forge-skill-jtbd-skill` |
 
 ### 问题解决
 
@@ -102,6 +102,7 @@ Phase 5  双 Agent 精炼 → 方法论评审 + 可用性评审
 | F6 | [TRIZ](https://github.com/peterfei/forge-skill-triz-skill) | 工程创新/矛盾解决 | 40 个发明原理系统化解决技术矛盾 | `npx skills add peterfei/forge-skill-triz-skill` |
 | F13 | [Cynefin 框架](https://github.com/peterfei/forge-skill-cynefin-skill) | 决策/复杂度分类 | 按 5 域分类匹配决策策略，避免跨域误判 | `npx skills add peterfei/forge-skill-cynefin-skill` |
 | F14 | [场景规划](https://github.com/peterfei/forge-skill-scenario-planning-skill) | 战略前瞻/不确定性决策 | 构建多个合理未来场景，改变心智模型应对深度不确定性 | `npx skills add peterfei/forge-skill-scenario-planning-skill` |
+| F15 | [博弈论](https://github.com/peterfei/forge-skill-game-theory-skill) | 战略决策/竞争分析 | 用数学模型分析策略互动中的决策行为，预测多方决策的稳定结果 | `npx skills add peterfei/forge-skill-game-theory-skill` |
 | F23 | [5 Whys](https://github.com/peterfei/forge-skill-five-whys-skill) | 根因分析/质量改进 | 连续追问穿透表面症状，定位系统性根因 | `npx skills add peterfei/forge-skill-five-whys-skill` |
 
 ## 生态

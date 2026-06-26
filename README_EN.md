@@ -91,7 +91,7 @@ Phase 5   Dual Agent Refinement → Methodology review + usability review
 |---|-------------|--------|---------------------|---------|
 | F5 | [Design Thinking](https://github.com/peterfei/forge-skill-design-thinking-skill) | Product Design/Innovation | Five-step innovation framework starting from user empathy | `npx skills add peterfei/forge-skill-design-thinking-skill` |
 | F11 | [Double Diamond](https://github.com/peterfei/forge-skill-double-diamond-skill) | Design Process/Problem Definition | Diverge→converge→diverge→converge structured process | `npx skills add peterfei/forge-skill-double-diamond-skill` |
-| F15 | [JTBD](https://github.com/peterfei/forge-skill-jtbd-skill) | Product Design/Needs | People "hire" products to get jobs done, not buy features | `npx skills add peterfei/forge-skill-jtbd-skill` |
+| F17 | [JTBD](https://github.com/peterfei/forge-skill-jtbd-skill) | Product Design/Needs | People "hire" products to get jobs done, not buy features | `npx skills add peterfei/forge-skill-jtbd-skill` |
 
 ### Problem Solving
 
@@ -100,6 +100,7 @@ Phase 5   Dual Agent Refinement → Methodology review + usability review
 | F6 | [TRIZ](https://github.com/peterfei/forge-skill-triz-skill) | Engineering/Contradiction Resolution | 40 invention principles for systematic resolution of technical contradictions | `npx skills add peterfei/forge-skill-triz-skill` |
 | F13 | [Cynefin](https://github.com/peterfei/forge-skill-cynefin-skill) | Decision/Complexity | Classify problems into 5 domains, match decision strategy to domain | `npx skills add peterfei/forge-skill-cynefin-skill` |
 | F14 | [Scenario Planning](https://github.com/peterfei/forge-skill-scenario-planning-skill) | Strategic Foresight/Uncertainty Decisions | Build multiple plausible future scenarios, reframe mental models for deep uncertainty | `npx skills add peterfei/forge-skill-scenario-planning-skill` |
+| F15 | [Game Theory](https://github.com/peterfei/forge-skill-game-theory-skill) | Strategy/Competition | Mathematical models for strategic interaction analysis, predict stable outcomes of multi-party decisions | `npx skills add peterfei/forge-skill-game-theory-skill` |
 | F23 | [5 Whys](https://github.com/peterfei/forge-skill-five-whys-skill) | Root Cause Analysis/Quality | Drill through surface symptoms via repeated questioning to locate systemic root causes | `npx skills add peterfei/forge-skill-five-whys-skill` |
 
 ## Ecosystem
